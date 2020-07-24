@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>COVIDPreds</title>
+<link rel="stylesheet" type="text/css" href="bootstrap.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header>
+    <nav id="header-nav" class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          
+          <div class="navbar-brand">
+            <a href="index.html"><h1>COVIDPreds</h1></a>
+            
+          </div>
+
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <div id="collapsable-nav" class="collapse navbar-collapse" >
+           <ul id="nav-list" class="nav navbar-nav navbar-right">
+            <li>
+              <a class = "visible-xs" href="#country">
+                <br class="hidden-xs">Country prediction</a>
+            </li>
+            <li>
+              <a class = "visible-xs" href="#state">
+                <br class="hidden-xs">Statewise prediction</a>
+            </li>
+            <li>
+              <a class = "visible-xs" href="#peak">
+                <br class="hidden-xs">Peak vs Population Density</a>
+          </ul><!-- #nav-list -->
+        </div><!-- .collapse .navbar-collapse -->
+      </div><!-- .container -->
+    </nav><!-- #header-nav -->
+  </header>
+
+  
+
+<h1 id="ourm">Predictions</h1>
+
+<div class="row">
+  <div class="col-xs-12">
+    <div class = "inner" id="country">
+    <h2>
+    Country predictions</h2>
+
+    <h3>Indian daily prediction of Confirmed cases vs Actual daily Confirmed cases</h3>
+    <p id="Graph">
+    	<img src="00012.jpg" alt="Indian Daily_Prediction vs Daily_Total" width=100%>
+    </p>
+        <p>The plot represents the number of confirmed cases per day(red) and it's prediction(blue)</p>
+        <p>The number of cases per day is predicted using the ARIMA model by using difference in number of cases reported per day in the period of 1 week</p>
+      <p>These predictions show that the decline in number of cases per day will start around 20th of September with about 1.35 Lakh cases per day</p>
+    <h3>Prediction of Confirmed cases in India vs Reported Confirmed cases in India</h3>
+    <p id="Graph2">
+      <img src="00013.jpg" alt="Indian Prediction vs Total" width=100%>
+    </p>
+        <p>The plot represents the number of confirmed cases till date(red) and it's prediction(blue)</p>
+        <p>The number of cases reported till date is calculated using the cummulative sum of the number of cases reported per day(from the previous graph)</p>
+    
+  </div>
+  </div>
+  <div class="col-xs-12">
+    <div class = "inner" id="state">
+    <h2>Statewise predictions</h2>
+    <h3>State wise daily confirmed cases predictions</h3>
+    <div class="flourish-embed flourish-chart" data-src="visualisation/3227129" data-url="https://flo.uri.sh/visualisation/3227129/embed"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+    <p>The plot represents the prediction of number of cases reported per day in each state</p>
+    <h3>State wise total confirmed cases predictions</h3>
+    <div class="flourish-embed flourish-chart" data-src="visualisation/3227246" data-url="https://flo.uri.sh/visualisation/3227246/embed"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+    <p>The plot represents the prediction of number of cases reported till date in each state</p>
+  </div>
+  </div>
+  <div class="col-xs-12">
+    <div class = "inner" id="peak">
+    <h2>Peak Cases VS Population Density</h2>
+    <p><img src="Peak Cases_Population vs Population Density.jpeg" alt="Peak Cases_Population vs Population Density" width=100%></p>
+    <p>The plot shows the relation between the peak number of cases reported so far per Crore and population density.</p>
+    <p>In this plot the population of the country is represented by the size of the points, the level of lockdown is represented by the colour and the shapes represent the countries.</p>
+    <p> This was used to estimate the peak number of cases at which the decline of cases starts.</p>
+  </div>
+  </div>
+</div>
+	<div style="text-align: right;margin-right: 5%;font-weight: bold;font-size:20px;font-family: : Montserrat">
+		<h4>By,</h4>
+		<h4>Pranay Bandaru</h4>
+		<h4>Deety Shanmukha Sreenivas</h4>
+		<h4>Prateek Reddy</h4>
+		<h4>Y Sai Lahar</h4>
+	</div>  
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
+
